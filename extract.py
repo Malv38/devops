@@ -20,3 +20,9 @@ def transform(rows):
         transformed_data.append(row)
 
     return [header] + transformed_data
+def load(rows, filename):
+    with open(filename, "w", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerows(rows)
+
+    print("Data loaded successfully")
