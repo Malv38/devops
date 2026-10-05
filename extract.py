@@ -8,3 +8,15 @@ def extract(filename):
     print("Row count:", len(rows) - 1)
 
     return rows
+
+
+def transform(rows):
+    header = rows[0]
+    data = rows[1:]
+
+    transformed_data = []
+
+    for row in data:
+        transformed_data.append(row)
+
+    return [header] + transformed_data
